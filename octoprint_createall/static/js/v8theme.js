@@ -1,5 +1,5 @@
 $(function() {
-  function V8ThemeViewModel(parameters) {
+  function CreateAllViewModel(parameters) {
     var self = this;
     self.temperature = parameters[0];
     self.terminal = parameters[1];
@@ -158,7 +158,7 @@ $(function() {
       $("#customControls_containerTemplate_collapsable, #customControls_containerTemplate_nameless").html(function() {
         return $(this).html().replace(/"custom_section">/g, '"custom_section" data-bind="css: { plugin_control: (plugin_control) }">');
       });
-      self.settings = self.settings.settings.plugins.v8theme;
+      self.settings = self.settings.settings.plugins.createall;
     };
 
     self.control.onBeforeBinding = function () {
@@ -394,7 +394,7 @@ $(function() {
 
       $("#settings_dialog_label").text("Settings");
       document.title = "CreateAll";
-      $("#navbar .brand").html("<img src='/plugin/v8theme/static/logo.png' />");
+      $("#navbar .brand").html("<img src='/plugin/createall/static/logo.png' />");
 
       // Merge Control and Terminal tabs
       $("#term_link").remove();
@@ -420,7 +420,7 @@ $(function() {
       $("#control .terminal").next(".row-fluid").prependTo("#terminal_main .accordion-inner");
       $("#control .terminal").prependTo("#terminal_main .accordion-inner");
 
-      $('link[rel="shortcut icon"]').attr('href', '/plugin/v8theme/static/createall.ico');
+      $('link[rel="shortcut icon"]').attr('href', '/plugin/createall/static/createall.ico');
       $("#terminal-output").addClass("well");
 
       $("#terminal_main").after("<div class='panel-footer'><div class='row-fluid'><div class='span8 terminal-textbox'></div><div class='span4 terminal-submit'></div></div></div>");
@@ -605,11 +605,11 @@ $(function() {
         }
       }, 375, {trailing: false}, {leading: false}));
 
-      $(".navbar-inner .nav-collapse, .btn-navbar").after("<div class='pull-left-container'><ul class='nav pull-left'><li><img class='printer-icon' src='plugin/v8theme/static/icon-printer.png'/><span class='printer_name_span'></span></li></ul></div>");
+      $(".navbar-inner .nav-collapse, .btn-navbar").after("<div class='pull-left-container'><ul class='nav pull-left'><li><img class='printer-icon' src='plugin/createall/static/icon-printer.png'/><span class='printer_name_span'></span></li></ul></div>");
       $(".btn-navbar").wrap("<div class='btn-nav-container'></div>");
       $.ajax({
         type: "GET",
-        url: "/api/plugin/v8theme",
+        url: "/api/plugin/createall",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function(response) {
@@ -716,7 +716,7 @@ $(function() {
         timeInSecs = timeInSecs % 60;
         var seconds = timeInSecs.toFixed(1);
         var notification = new Notification(payload.filename + ' - Print Complete', {
-          icon: '/plugin/v8theme/static/square_logo.png',
+          icon: '/plugin/createall/static/square_logo.png',
           body: "Your print is complete after " + hours + " hour(s), " + minutes + " minute(s), and " + seconds + " second(s).",
         });
         notification.onclick = function () {
@@ -727,7 +727,7 @@ $(function() {
     }
 
     self.onDataUpdaterPluginMessage = function(plugin, data) {
-      if (plugin === "v8theme") {
+      if (plugin === "createall") {
         if (data.printer_name) {
           self.setPrinterName(data.printer_name);
         } else {
@@ -753,8 +753,8 @@ $(function() {
   }
 
   OCTOPRINT_VIEWMODELS.push([
-    V8ThemeViewModel, ["temperatureViewModel", "terminalViewModel", "gcodeFilesViewModel", "settingsViewModel", "controlViewModel", "customControlViewModel", "loginStateViewModel"],
-    ["#settings_plugin_v8theme"]
+    CreateAllViewModel, ["temperatureViewModel", "terminalViewModel", "gcodeFilesViewModel", "settingsViewModel", "controlViewModel", "customControlViewModel", "loginStateViewModel"],
+    ["#settings_plugin_createall"]
   ]);
 });
 

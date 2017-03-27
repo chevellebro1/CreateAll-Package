@@ -25,25 +25,25 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(/plugin/v8theme/static/fonts/Lato-Light.ttf) format('truetype');
+  src: local('Lato Light'), local('Lato-Light'), url(/plugin/createall/static/fonts/Lato-Light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(/plugin/v8theme/static/fonts/Lato-Regular.ttf) format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url(/plugin/createall/static/fonts/Lato-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(/plugin/v8theme/static/fonts/Lato-Bold.ttf) format('truetype');
+  src: local('Lato Bold'), local('Lato-Bold'), url(/plugin/createall/static/fonts/Lato-Bold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 800;
-  src: local('Lato Black'), local('Lato-Black'), url(/plugin/v8theme/static/fonts/Lato-Black.ttf) format('truetype');
+  src: local('Lato Black'), local('Lato-Black'), url(/plugin/createall/static/fonts/Lato-Black.ttf) format('truetype');
 }
 * {
   -webkit-box-sizing: border-box;
