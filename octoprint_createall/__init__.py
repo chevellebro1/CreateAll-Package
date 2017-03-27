@@ -51,8 +51,8 @@ class CreateAllPlugin(octoprint.plugin.SettingsPlugin,
 
     def get_update_information(*args, **kwargs):
         return dict(
-            v8theme=dict(
-                type="github_version",
+            createall=dict(
+                type="github_commit",
                 user="chevellebro1",
                 repo="CreateAll-Package",
                 branch='master',
