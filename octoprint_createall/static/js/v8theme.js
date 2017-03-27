@@ -176,6 +176,7 @@ $(function() {
             "name": "Spindle On",
             "width": "3"
           }],
+          "collapsed": "true",
           "layout": "horizontal_grid",
           "name": "CNC Mill"
         },

@@ -63,7 +63,7 @@ class CreateAllPlugin(octoprint.plugin.SettingsPlugin,
 
     def get_template_configs(self):
         return [
-            dict(type="settings", name="chevellebro1",
+            dict(type="settings", name="CreateAll",
                  data_bind="visible: loginState.isAdmin()"),
         ]
 
