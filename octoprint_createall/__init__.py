@@ -5,7 +5,7 @@ import octoprint.plugin
 import flask
 
 
-class V8themePlugin(octoprint.plugin.SettingsPlugin,
+class CreateAllPlugin(octoprint.plugin.SettingsPlugin,
                     octoprint.plugin.TemplatePlugin,
                     octoprint.plugin.AssetPlugin,
                     octoprint.plugin.SimpleApiPlugin,
@@ -52,18 +52,18 @@ class V8themePlugin(octoprint.plugin.SettingsPlugin,
     def get_update_information(*args, **kwargs):
         return dict(
             v8theme=dict(
-                type="github_commit",
-                user="Voxel8",
-                repo="OctoPrint-V8theme",
+                type="github_version",
+                user="chevellebro1",
+                repo="CreateAll-Package",
                 branch='master',
-                pip="https://github.com/Voxel8/OctoPrint-V8theme/archive/"
+                pip="https://github.com/chevellebro1/CreateAll-Package/archive/"
                     "{target_version}.zip",
             )
         )
 
     def get_template_configs(self):
         return [
-            dict(type="settings", name="Voxel8",
+            dict(type="settings", name="chevellebro1",
                  data_bind="visible: loginState.isAdmin()"),
         ]
 
@@ -71,7 +71,7 @@ class V8themePlugin(octoprint.plugin.SettingsPlugin,
 def __plugin_load__():
     global __plugin_implementation__
     global __plugin_hooks__
-    __plugin_implementation__ = V8themePlugin()
+    __plugin_implementation__ = CreateAllPlugin()
 
     __plugin_hooks__ = {
         "octoprint.plugin.softwareupdate.check_config":
