@@ -383,7 +383,7 @@ $(function() {
       $(".footer .pull-right").append(
         "<li><a href='http://www.voxel8.co/terms-and-conditions' target='_blank'>Terms and Conditions</a></li>"
       );
-      
+
       // Merge Temperature and Control tabs
       $("#temp_link").remove();
       $("#control_link").addClass("active");
@@ -393,7 +393,7 @@ $(function() {
       $("#temperature-graph").closest(".row").attr("class", "row-fluid");
 
       $("#settings_dialog_label").text("Settings");
-      document.title = "Voxel8 DevKit";
+      document.title = "CreateAll";
       $("#navbar .brand").html("<img src='/plugin/v8theme/static/logo.png' />");
 
       // Merge Control and Terminal tabs
@@ -420,7 +420,7 @@ $(function() {
       $("#control .terminal").next(".row-fluid").prependTo("#terminal_main .accordion-inner");
       $("#control .terminal").prependTo("#terminal_main .accordion-inner");
 
-      $('link[rel="shortcut icon"]').attr('href', '/plugin/v8theme/static/favicon.ico');
+      $('link[rel="shortcut icon"]').attr('href', '/plugin/v8theme/static/createall.ico');
       $("#terminal-output").addClass("well");
 
       $("#terminal_main").after("<div class='panel-footer'><div class='row-fluid'><div class='span8 terminal-textbox'></div><div class='span4 terminal-submit'></div></div></div>");
@@ -672,7 +672,7 @@ $(function() {
 
       $("#Pneumatics_main .custom_section_horizontal_grid .span3").first().addClass("first");
 
-      // Manage extra contents of .tab-content 
+      // Manage extra contents of .tab-content
       $("#gcode").remove();
       var tabContentHTML = $(".main-content-wrapper").html().replace(/<!-- ko allowBindings: false -->|<!-- \/ko -->|<!-- ko allowBindings: true -->/g, "");
       if (tabContentHTML.trim().length) {
@@ -703,7 +703,7 @@ $(function() {
 
     self.onEventPrintDone = function(payload) {
       if (typeof Notification === 'undefined') {
-        console.log('Desktop notifications not available in your browser. Try Chromium.'); 
+        console.log('Desktop notifications not available in your browser. Try Chromium.');
         return;
       }
       if (Notification.permission !== "granted")
@@ -720,7 +720,7 @@ $(function() {
           body: "Your print is complete after " + hours + " hour(s), " + minutes + " minute(s), and " + seconds + " second(s).",
         });
         notification.onclick = function () {
-          window.focus();  
+          window.focus();
           notification.close();
         };
       }
@@ -737,8 +737,8 @@ $(function() {
     }
 
     self.setPrinterName = function(printerName) {
-      if (document.title !== "Voxel8 DevKit") {
-        document.title = printerName + " \u2013 Voxel8 DevKit";
+      if (document.title !== "CreateAll") {
+        document.title = printerName + " \u2013 CreateAll";
       } else {
         document.title = printerName + " \u2013 " + document.title;
       }
@@ -747,7 +747,7 @@ $(function() {
     }
 
     self.hidePrinterName = function() {
-      document.title = "Voxel8 DevKit";
+      document.title = "CreateAll";
       $(".nav.pull-left").css("display", "none");
     }
   }
