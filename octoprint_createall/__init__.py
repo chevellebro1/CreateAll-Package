@@ -52,7 +52,7 @@ class CreateAllPlugin(octoprint.plugin.SettingsPlugin,
     def get_update_information(*args, **kwargs):
         return dict(
             createall=dict(
-                type="github_commit",
+                type="github_release",
                 user="chevellebro1",
                 repo="CreateAll-Package",
                 branch='master',

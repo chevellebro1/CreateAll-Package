@@ -172,51 +172,12 @@ $(function() {
         {
           "children": [
           {
-            "command": "M125 S%(tpressure)s",
-            "input": [{
-              "default": "40",
-              "name": "Tank Pressure",
-              "parameter": "tpressure",
-              "slider": "false"
-            }],
-            "name": "Set",
-            "offset": "0",
-            "width": "6"
-          },
-          {
-            "command": "M236 S%(epressure)s",
-            "input": [{
-              "default": "18",
-              "name": "Extrusion Pressure",
-              "parameter": "epressure",
-              "slider": "false"
-            }],
-            "name": "Set",
-            "offset": "0",
-            "width": "6"
-          },
-          {
-            "command": "M42 P2 S0",
-            "name": "Close Valve",
-            "width": "3"
-          },
-          {
-            "command": "M42 P2 S255",
-            "name": "Open Valve",
-            "width": "3"
-          },
-          {
-            "commands": ["M400", "M42 P75 S0"],
-            "name": "Raise Silver",
-            "width": "3"
-          },
-          {
-            "commands": ["M400", "M42 P75 S255"],
-            "name": "Lower Silver",
+            "commands": ["M3"],
+            "name": "Spindle On",
             "width": "3"
           }],
           "layout": "horizontal_grid",
-          "name": "Pneumatics"
+          "name": "CNC Mill"
         },
         {
           "children": [

@@ -1115,18 +1115,6 @@ ul.terminal-options .divider {
 #temperature_wrapper label {
   font-weight: 700;
 }
-#Pneumatics_main .custom_section_horizontal_grid .span3 {
-  width: auto;
-}
-
-#Pneumatics_main .custom_section_horizontal_grid .span6,
-#Pneumatics_main .custom_section_horizontal_grid .span3 {
-  margin-bottom: 10px;
-}
-
-#Pneumatics_main .custom_section_horizontal_grid .span3.first {
-  margin-left: 0px;
-}
 #webcam_wrapper .accordion-inner {
   padding: 0px;
 }
@@ -1428,12 +1416,6 @@ ul.terminal-options .divider {
   }
   .navbar-inner .nav-collapse + .pull-left-container {
     display: none;
-  }
-  #Pneumatics_main .span6, #Pneumatics_main .span3 {
-    display: inline-block;
-  }
-  #Pneumatics_main .span3 {
-    margin-right: 10px;
   }
 }
 /*===================================================
